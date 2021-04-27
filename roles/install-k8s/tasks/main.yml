@@ -1,0 +1,5 @@
+---
+# tasks file for install-k8s
+- include: change-routes.yml
+- include: install.yml
+

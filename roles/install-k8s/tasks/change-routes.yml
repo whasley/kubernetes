@@ -1,0 +1,18 @@
+---
+- name: Setando as configuracoes de rotas para nosso ambiente Openstack
+  shell: |
+    ip route add 10.30.0.0/20 via 10.11.19.254 dev ens3
+    ip route add 10.20.6.0/24 via 10.11.19.254 dev ens3
+    ip route del 10.0.0.0/8 via 10.11.19.254 dev ens3
+  tags:
+    - config_autocomplete
+
+- name: Copiando arquivo de rotas para o Dispatcher
+  copy:
+    src: roles/install-k8s/files/50-ifpostup-routes-k8s.sh
+    dest: /etc/networkd-dispatcher/routable.d/50-ifpostup-routes-k8s.sh
+    owner: root
+    group: root
+    mode: a+x 
+  tags:
+    - copy_dispatcher 
