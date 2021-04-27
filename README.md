@@ -30,7 +30,7 @@ Agora vamos clonar o repositorio do kubernetes no git do suporte.
 
 
 ```
-git clone https://git.lsd.ufcg.edu.br/ops/kubernetes.git
+git clone https://github.com/whasley/kubernetes.git
 cd kubernetes
 ```
 
