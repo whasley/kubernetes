@@ -1,6 +1,6 @@
 # Kubernetes
 
-Este repositorio tem como objetivo centralizar playbooks Ansible para adiminstração de Kubernetes. Além de compartilhar conhecimento entre os membros do suprote.
+Este repositorio tem como objetivo centralizar playbooks Ansible para adiminstração de Kubernetes. Além de compartilhar conhecimento entre os membros do suporte.
 
 ## Getting Started
 
