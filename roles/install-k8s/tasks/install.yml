@@ -4,6 +4,11 @@
 - name: Instalando o Docker
   shell: curl -fsSL https://get.docker.com | bash -
 
+- name: Setando o cgroupdriver
+  copy:
+    src: daemon.json
+    dest: '/etc/docker/daemon.json'
+
 - name: Adicionando as chaves repositorio Kubernetes no apt
   apt_key:
     url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
