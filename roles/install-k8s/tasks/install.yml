@@ -15,6 +15,12 @@
 - name: Recarregando o daemon
   command: systemctl daemon-reload
 
+- name: Reiniciando o docker
+  command: systemctl restart docker
+
+- name: Reiniciando o kubelet
+  command: systemctl restart kubelet  
+
 - name: Adicionando as chaves repositorio Kubernetes no apt
   apt_key:
     url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
